@@ -1,0 +1,10 @@
+target/
+project/project
+bin/
+local.properties
+proguard-sbt.txt
+*.class
+*.log
+.idea/
+/out/
+.idea_modules/

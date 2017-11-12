@@ -1,4 +1,3 @@
-enablePlugins(AndroidApp)
 android.useSupportVectors
 
 lazy val commonSettings = Seq(
@@ -12,7 +11,7 @@ lazy val commonSettings = Seq(
 )
 
 lazy val androidSettings = Seq(
-  platformTarget := "android-27",
+  //platformTarget := "android-27",
   version := "0.1-SNAPSHOT",
   versionCode := Some(1),
   instrumentTestRunner := "android.support.test.runner.AndroidJUnitRunner",
@@ -31,6 +30,7 @@ lazy val core = project
   .settings(commonSettings, exportJars := true)
 
 lazy val multiproject = (project in file("."))
+  .enablePlugins(AndroidApp)
   .settings(androidSettings, commonSettings)
   .dependsOn(core)
 	.aggregate(core)

@@ -19,7 +19,7 @@ class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState)
         // type ascription is required due to SCL-10491
         val vh: TypedViewHolder.main = TypedViewHolder.setContentView(this, TR.layout.main)
-        vh.text.setText(s"Hello world, from ${TR.string.app_name.value} ${myOptionET.value} ")
+        vh.text.setText(s"Hello world, from ${TR.string.app_name.value} ")
         vh.image.getDrawable match {
           case a: Animatable => a.start()
           case _ => // not animatable

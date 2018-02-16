@@ -2,6 +2,7 @@ android.useSupportVectors
 
 lazy val commonSettings = Seq(
   scalaVersion := "2.11.8",
+  scalacOptions += "-Xsource:2.12",
   javacOptions in Compile ++= "-source" :: "1.7" :: "-target" :: "1.7" :: Nil,
   libraryDependencies ++= Seq(
     "org.typelevel" %% "cats-core" % "0.9.0",
